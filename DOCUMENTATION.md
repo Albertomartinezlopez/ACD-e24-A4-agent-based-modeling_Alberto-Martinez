@@ -143,32 +143,61 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
 
 ## Technical Explanation
 
-*(Provide a concise explanation of your code, focusing on how you implemented OOP principles and agent-based modeling. Discuss how your approach generates the final structural patterns and the mathematical or computational principles involved.)*
 
-### Topics to Cover:
-
+**Program 1: Walker Agent on Surface**
 - **Object-Oriented Design**
-
-  - Explain the classes you designed and why.
-  - Discuss how you applied OOP principles like encapsulation, inheritance, and polymorphism.
-  - Describe how the classes interact within the simulation.
-
+    - **Classes**: The Walker class models an agent moving across a surface. It encapsulates properties like its position (u, v parameters) and behavior (step method for movement).
+    - **OOP Principles**:
+      - **Encapsulation**: The agent's position and surface are managed internally within the class.
+      - **Modularity**: Each walker instance operates independently, promoting code reuse and scalability.
+    - **Class Interaction**: The Walker interacts with the surface geometry by evaluating points and updating its position within the surface's parameter space.
 - **Agent Behaviors and Interactions**
-
-  - Describe the rules governing agent behaviors.
-  - Explain how agents interact with each other and the environment.
-  - Discuss any algorithms or decision-making processes implemented.
-
+    - **Behavior Rules**: The agent takes random steps within defined bounds, mimicking exploratory movement.
+    - **Environment Interaction**: The agent stays constrained within the surface's domains, ensuring biologically plausible navigation.
+    - **Algorithms**: The agent’s movement relies on bounded random number generation for both the u and v parameters.
 - **Simulation Loop**
-
-  - Explain how the simulation evolves over time.
-  - Describe how time-stepping or iteration is handled.
-  - Discuss any performance considerations.
-
+    - **Evolution**: At each time step, the agent moves randomly, updating its position on the surface.
+    - **Iteration**: The simulation iterates through a predefined number of steps, storing each new position.
+    - **Performance**: Lightweight random sampling and simple position updates make the simulation efficient.
 - **Visualization**
+    - **Output**: A list of 3D points representing the agent’s path is generated.
+    - **Techniques**: The points are visualized in Rhino as individual objects, showing the cumulative movement of the agent over time.
 
-  - Explain how the agent data is used to generate the final models.
-  - Discuss any visualization techniques or tools used.
+**Program 2: Proportional Z-Movement of Points**
+- **Object-Oriented Design**
+  - **Classes**: This program processes points directly without explicit OOP constructs. Each point behaves as an implicit "agent."
+  - **OOP Principles**: Encapsulation is implicit in the function’s structure, where input points are processed and returned as transformed entities.
+  - **Interaction**: The function treats the points as a cohesive dataset, applying transformations independently to each based on its position in the list.
+- **Agent Behaviors and Interactions**
+  - **Behavior Rules**: Points are moved proportionally along the Z-axis, with the first point experiencing the largest shift and the last experiencing the smallest.
+  - **Environment Interaction**: The transformation is predefined and does not depend on external conditions.
+  - **Algorithms**: Linear interpolation determines the Z-movement for each point, ensuring a smooth gradation.
+- **Simulation Loop**
+  - **Evolution**: Each point in the input list is processed sequentially.
+  - **Iteration**: The transformation is applied once, making this a single-step operation.
+  - **Performance**: Efficient list processing ensures rapid computation for large datasets.
+- **Visualization**
+  - **Output**: A modified list of points is returned, representing the new positions.
+  - **Techniques**: Transformed points are visualized in Rhino to illustrate the gradated vertical displacement.
+
+**Program 3: Simulated Milling of Surfaces**
+- **Object-Oriented Design**
+  - **Classes:** 
+    - Explicit class structures are not used, but geometric entities like Cylinder and Brep from Rhino.Geometry act as modular components.
+    - The milling tool behaves as an implicit "agent."
+  - **OOP Principles**: Encapsulation is achieved through Rhino.Geometry objects, and modularity allows flexibility in modifying the tool or block properties.
+  - **Interaction**: The tool interacts with the block by performing Boolean difference operations at each step.
+- **Agent Behaviors and Interactions**
+  - **Behavior Rules**: The tool follows a predefined path and removes material from the block at each step.
+  - **Environment Interaction**: The toolpath curve dictates the tool’s position, influencing where material is removed.
+  - **Algorithms**: Boolean difference operations handle the material subtraction, while transformations position the tool along the path.
+- **Simulation Loop**
+  - **Evolution**: The tool moves along the curve, interacting with the block geometry at discrete points.
+  - **Iteration**: The loop progresses through sampled points on the toolpath curve, transforming the tool and updating the block geometry at each step.
+  - **Performance**: Boolean operations are computationally intensive, requiring careful handling of geometry complexity.
+- **Visualization**
+  - **Output**: The resulting block geometry, shaped by the milling process, is the final output.
+  - **Techniques**: Rhino's 3D visualization tools display the modified geometry, illustrating the effects of the simulated milling.
 
 ---
 
@@ -214,18 +243,25 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
 
 ## Challenges and Solutions
 
-*(Discuss any challenges you faced during the assignment and how you overcame them.)*
+1. **Confining Agent Movements to Surface Domains**
+- **Challenge**: Ensuring agents moved within the valid parameter range of a surface without exceeding its bounds.
+- **Solution**: Adjusted movement logic to dynamically check and constrain parameter updates based on the surface's domain values, addressing errors encountered during testing.
 
-### Examples:
+2. **Improving Computational Efficiency in Geometry Operations**
+- **Challenge**: Boolean and transformation operations on complex geometries were computationally expensive and error-prone.
+- **Solution**: Streamlined the use of Rhino.Geometry methods, such as ensuring proper transformations and efficient combination of geometry operations to reduce processing time.
 
-- **Challenge 1**: Managing large numbers of agents efficiently.
-  - **Solution**: Implemented spatial partitioning to reduce computation time.
+3. **Resolving Type-Related Errors in Rhino API Functions**
+- **Challenge**: Frequent mismatches between data types expected by Rhino functions (e.g., handling of lists, vectors, and Breps).
+- **Solution**: Debugged and refined type handling, including corrections to Brep.CreateBooleanDifference and PointAdd operations, to align with the API's requirements.
 
-- **Challenge 2**: Agents getting stuck or clustering unnaturally.
-  - **Solution**: Adjusted interaction rules and added collision avoidance behaviors.
+4. **Validating and Transforming Input Data**
+- **Challenge**: Ensuring that inputs (e.g., point lists, surfaces, and toolpath data) were in the correct format and handled inconsistencies in provided data.
+- **Solution**: Introduced input validation processes and error handling mechanisms to detect and address invalid or incomplete data before processing.
 
-- **Challenge 3**: Visualizing the simulation in real-time.
-  - **Solution**: Used efficient data structures and optimized rendering techniques.
+5. **Managing Visualization of Agent Movements and Results**
+- **Challenge**: Errors occurred in visualizing dynamic agent paths and geometry transformations, leading to incomplete or incorrect outputs.
+- **Solution**: Refined visualization methods, including point generation and geometric transformations, to accurately represent iterative processes and final results.
 
 ---
 
@@ -242,12 +278,15 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
 
   - [Mesa: Agent-Based Modeling in Python](https://mesa.readthedocs.io/en/master/)
   - [Agent-Based Models in Architecture](https://www.researchgate.net/publication/279218265_Agent-based_models_in_architecture_new_possibilities_of_interscalar_design)
+  - [Walker agent](https://natureofcode.com/book/chapter-7-cellular-automata/#randomwalks)
+  - [Walker agent forum](https://www.grasshopper3d.com/forum/topics/random-walk-scripting)
+  - [Random Walks in Programming](https://thecodingtrain.com/beginners/p5js/8.1-random-walk.html)
+  - [Geometry Transformations](https://developer.rhino3d.com/guides/rhinopython/geometry-transformations/)
 
 - **Visualization Tools**
 
   - [Rhino.Python Guides](https://developer.rhino3d.com/guides/rhinopython/)
-  - [matplotlib](https://matplotlib.org/)
-  - [Blender Python API](https://docs.blender.org/api/current/)
+
 
 ---
 
