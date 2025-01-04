@@ -5,6 +5,8 @@ The agent-based models documented here are based on a research project that expl
 
 The first program simulates agents traversing complex surfaces, mimicking the movements of marine organisms as they explore and attach to the reef structure. The second program models the gradual transformation of these surfaces, translating ecological interactions into proportional movements that shape the reef's micro-topography. The third program integrates toolpath-like milling strategies, representing the biological and physical forces eroding or modifying the reef's surfaces. Together, these simulations provide a framework to analyze and predict the dynamic relationship between artificial reef structures and their colonizing biota, aiding the design of reefs that foster enhanced ecological integration and bioreceptivity in marine environments.
 
+![Limpet trails on rocks](images/limpet-trails-adrian-bicker.jpg)
+
 ## Table of Contents
 
 - [Pseudo-Code](#pseudo-code)
@@ -209,35 +211,103 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
 
 1. **Variation 1: [Name/Description]**
 
-   ![Variation 1](images/variation1.jpg)
+   ![Variation 1](images/variation1_8-50.jpg)
 
    - **Parameters Changed**:
-     - interaction_radius: [Value]
-     - alignment_strength: [Value]
+     - seed: [8]
+     - time: [50]
    - **Description**:
      - Describe how these changes affected agent behaviors and the final pattern.
 
 2. **Variation 2: [Name/Description]**
 
-   ![Variation 2](images/variation2.jpg)
+   ![Variation 2](images/variation2_8-250.jpg)
 
    - **Parameters Changed**:
-     - cohesion_factor: [Value]
-     - separation_distance: [Value]
-   - **Description**:
-     - Discuss the observed changes in the model.
-
-3. **Variation 3: [Name/Description]**
-
-   ![Variation 3](images/variation3.jpg)
-
-   - **Parameters Changed**:
-     - randomness: [Value]
-     - environmental_influence: [Value]
+     - seed: [8]
+     - time: [250]
    - **Description**:
      - Explain how the introduction of randomness or environmental factors impacted the results.
 
-*(Add more variations as needed.)*
+3. **Variation 3: [Name/Description]**
+
+   ![Variation 3](images/variation3_8-500.jpg)
+
+   - **Parameters Changed**:
+     - seed: [8]
+     - time: [500]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
+
+4. **Variation 4: [Name/Description]**
+
+   ![Variation 4](images/variation4_8-750.jpg)
+
+   - **Parameters Changed**:
+     - seed: [8]
+     - time: [750]
+   - **Description**:
+     - Discuss the observed changes in the model.
+
+5. **Variation 5: [Name/Description]**
+
+   ![Variation 5](images/variation5_8-1000.jpg)
+
+   - **Parameters Changed**:
+     - seed: [8]
+     - time: [1000]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
+
+6. **Variation 6: [Name/Description]**
+
+   ![Variation 6](images/variation6_10-50.jpg)
+
+   - **Parameters Changed**:
+     - seed: [10]
+     - time: [50]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
+
+7. **Variation 7: [Name/Description]**
+
+   ![Variation 7](images/variation7_10-250.jpg)
+
+   - **Parameters Changed**:
+     - seed: [10]
+     - time: [250]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
+
+8. **Variation 8: [Name/Description]**
+
+   ![Variation 8](images/variation8_10-500.jpg)
+
+   - **Parameters Changed**:
+     - seed: [10]
+     - time: [500]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
+
+9. **Variation 9: [Name/Description]**
+
+   ![Variation 9](images/variation9_10-750.jpg)
+
+   - **Parameters Changed**:
+     - seed: [10]
+     - time: [750]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
+
+10. **Variation 10: [Name/Description]**
+
+   ![Variation 10](images/variation10_10-1000.jpg)
+
+   - **Parameters Changed**:
+     - seed: [10]
+     - time: [1000]
+   - **Description**:
+     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 ---
 
