@@ -216,8 +216,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [8]
      - time: [50]
-   - **Description**:
-     - Describe how these changes affected agent behaviors and the final pattern.
 
 2. **Variation 2: [Name/Description]**
 
@@ -226,8 +224,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [8]
      - time: [250]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 3. **Variation 3: [Name/Description]**
 
@@ -236,8 +232,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [8]
      - time: [500]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 4. **Variation 4: [Name/Description]**
 
@@ -246,8 +240,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [8]
      - time: [750]
-   - **Description**:
-     - Discuss the observed changes in the model.
 
 5. **Variation 5: [Name/Description]**
 
@@ -256,8 +248,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [8]
      - time: [1000]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 6. **Variation 6: [Name/Description]**
 
@@ -266,8 +256,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [10]
      - time: [50]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 7. **Variation 7: [Name/Description]**
 
@@ -276,8 +264,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [10]
      - time: [250]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 8. **Variation 8: [Name/Description]**
 
@@ -286,8 +272,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [10]
      - time: [500]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 9. **Variation 9: [Name/Description]**
 
@@ -296,8 +280,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [10]
      - time: [750]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 10. **Variation 10: [Name/Description]**
 
@@ -306,8 +288,6 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [10]
      - time: [1000]
-   - **Description**:
-     - Explain how the introduction of randomness or environmental factors impacted the results.
 
 ---
 
