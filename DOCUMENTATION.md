@@ -6,6 +6,7 @@ The agent-based models documented here are based on a research project that expl
 The first program simulates agents traversing complex surfaces, mimicking the movements of marine organisms as they explore and attach to the reef structure. The second program models the gradual transformation of these surfaces, translating ecological interactions into proportional movements that shape the reef's micro-topography. The third program integrates toolpath-like milling strategies, representing the biological and physical forces eroding or modifying the reef's surfaces. Together, these simulations provide a framework to analyze and predict the dynamic relationship between artificial reef structures and their colonizing biota, aiding the design of reefs that foster enhanced ecological integration and bioreceptivity in marine environments.
 
 ![Limpet trails on rocks](images/limpet-trails-adrian-bicker.jpg)
+*Limpet trails on rocks. Source: Adrian Bicker*
 
 ## Table of Contents
 
@@ -288,6 +289,15 @@ The first program simulates agents traversing complex surfaces, mimicking the mo
    - **Parameters Changed**:
      - seed: [10]
      - time: [1000]
+
+11. **Translated points from surface [Name/Description]**
+
+![Variation 11](images/translated_points_from_surface.jpg)
+
+   - **Parameters Changed**:
+     - seed: [10]
+     - time: [1000]
+     - Depth: [1-6]
 
 ---
 
